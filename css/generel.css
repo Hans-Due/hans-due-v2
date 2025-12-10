@@ -1,0 +1,28 @@
+html {
+  /* Colours */
+  --bg-base: #f9f4eb;
+  --red-primary: #da362f;
+  --blue-primary: #3a5f7a;
+  --black-primary: #2a2e32;
+  --contrast-1: #ffbe43;
+  --contrast-2: #fda726;
+  --contrast-3: #81c9e6;
+  --contrast-4: #6598b6;
+  --base-var1: #e7ddcf;
+  --base-var2: #f5ede4;
+  --base-var3: #fcf8f2;
+  --red-var1: #a22723;
+  --red-var2: #e88a85;
+  --red-var3: #f7d9d7;
+  --blue-var1: #264554;
+  --blue-var2: #547a92;
+  --blue-var3: #e6ebee;
+  --black-var1: #4a5056;
+  --black-var2: #777d83;
+
+  /* Fonts */
+  --font-h1-var1: "Instrument Serif", serif;
+  --font-h1-var2: "Oswald", sans-serif;
+  --font-h2-var1: "Instrument Serif", serif;
+  --font-h2-var2: "Oswald", sans-serif;
+}
