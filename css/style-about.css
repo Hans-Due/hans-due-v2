@@ -7,22 +7,97 @@ body {
 }
 
 p {
-  font-style: var(--font-p-var1);
+  font-family: var(--font-p-var1);
+}
+
+/* TOPPEN */
+.img_top img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  height: 90vh;
+  width: 50vw;
+  object-fit: cover;
+}
+
+.about_section_top {
+  background-color: var(--contrast-4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about_top {
-  font-style: var(--font-h1-var1);
-}
-
-.img_top {
-  grid-column: 2/3;
   grid-row: 1/2;
-  max-width: 600px;
+  font-family: var(--font-h1-var2);
+  text-align: right;
+  align-self: end;
+  margin: 50px 50px;
 }
 
-@media screen and (min-width: 800px) {
-  section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.about_top .h1-var1 {
+  color: var(--bg-base);
+  justify-content: end;
+  margin-left: 400px;
+}
+
+.about_top .h1-var3 {
+  color: var(--contrast-1);
+}
+
+/* SECTION 2 */
+
+.about_background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: left;
+}
+
+.background_header h2 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: var(--red-primary);
+  text-align: center;
+}
+
+.background_earlyyears_header h2 {
+  font-size: 2.2rem;
+  color: var(--blue-primary);
+  margin: -15px 0;
+  margin-left: 500px;
+}
+
+.background_text {
+  max-width: 680px;
+  padding: 40px 40px;
+  color: var(--black-primary);
+}
+
+/* VIDEO SECTION */
+
+.about_interviewmain {
+  background-color: var(--red-var1);
+}
+
+/* PRINTSHOP */
+.about_printshop {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: flex-start;
+}
+
+.printshop_header .h2-var2 {
+  color: var(--red-primary);
+}
+
+.about_printshop .printshop_img img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: cover;
+}
+
+.printshop_header p {
+  flex: 1;
+  max-width: 60ch;
 }
