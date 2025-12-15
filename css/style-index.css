@@ -1,0 +1,120 @@
+/*-------------- SEKTION 1 ----------------*/
+.hero-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 90vh;
+  background-color: var(--red-primary);
+}
+.hero-index-img img {
+  height: 90vh;
+  width: 50vw;
+  object-fit: cover;
+}
+.hero-index-text {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding: 30px;
+  width: 50vw;
+}
+.hero-index-text h1 {
+  color: var(--bg-base);
+}
+.hero-index-text .h1-var1 {
+  margin-left: 30px;
+  line-height: 50%;
+}
+.hero-index-text .h1-var2 {
+  margin-left: 100px;
+}
+
+/*-------------- SEKTION 2 ----------------*/
+.slider-sektion {
+  height: 90vh;
+}
+
+.slider-sektion h2 {
+  color: var(--red-primary);
+  text-align: center;
+  padding-top: 60px;
+}
+
+/*-------------- SEKTION 3 ----------------*/
+.hero-index-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  background-color: var(--contrast-4);
+}
+
+.hero-indexabout-vid img {
+  height: 90vh;
+  width: 50vw;
+  object-fit: cover;
+}
+.hero-indexabout-text {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-end;
+  padding: 30px;
+  width: 50vw;
+}
+.hero-indexabout-text .h1-var1 {
+  color: var(--bg-base);
+  text-align: right;
+  line-height: 70%;
+}
+.hero-indexabout-text .h1-var3 {
+  color: var(--contrast-1);
+  text-align: right;
+}
+
+.more-var1 {
+  background-color: var(--red-primary);
+  width: 200px;
+  padding: 16px;
+  border-radius: 42.5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--p-var1);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--bg-base);
+  justify-self: flex-end;
+}
+.more-var1:hover {
+  background-color: var(--red-var1);
+}
+
+/*-------------- SEKTION 4 ----------------*/
+.grid_1-1 {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid_1-1_text {
+  padding: 50px;
+}
+
+.more-var2 {
+  background-color: var(--contrast-1);
+  width: 200px;
+  padding: 16px;
+  border-radius: 42.5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--p-var1);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--bg-base);
+  justify-self: flex-end;
+}
+.more-var2:hover {
+  background-color: var(--contrast-2);
+}
