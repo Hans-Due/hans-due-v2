@@ -21,12 +21,10 @@ section {
 
 .New_realism_text {
   width: 50%;
-  background-color: var(--blue-primary);
+  background-color: var(--contrast-4);
   color: white;
   padding: 60px;
-
 display: flex;
-
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 120px;
@@ -34,7 +32,7 @@ display: flex;
 
 .New_realism_text h1 {
   margin: 0;
-  line-height: 1;
+ 
   text-align: right;
 }
 
@@ -45,6 +43,7 @@ display: flex;
   font-style: italic;
   font-size: 100px;
   font-weight: 400;
+
 }
 
 .New_realism_text h1:last-child {
@@ -53,7 +52,9 @@ display: flex;
     font-family: var(--font-h1-var2);
   font-size: 180px;
   font-weight: 500;
-  letter-spacing: 10px
+
+ 
+
 }
 
 .New_realism_img {
@@ -71,40 +72,37 @@ display: flex;
 /* ---------- COMMENTS ---------- */
 
 .comments {
-
-
     background-color: var(--base-var3);
   padding: 80px 0;
   text-align: center;
-
+ min-height: 85vh;
  
 }
 .comments-text {
   max-width: 700px;
   margin: 0 auto;
+ text-align:center;
 
 }
 
 .comments h2:first-child {
  
   color: var(--blue-primary);
-
-    font-family: var(--font-h2-var1);
+ font-family: var(--font-h2-var1);
   font-style: italic;
-  font-size: 32px;
-  font-weight: 400;margin: 0;
-  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom:  6px;
+  margin-left: -450px;
+  
 }
 
 .comments h2:last-child {
   font-family: var(--font-h2-var2);
   color: var(--contrast-2);
-
-  
   font-size: 28px;
   font-weight: 500;
-  letter-spacing: 4px;
   text-transform: uppercase;
+
   
 } .comments h2:nth-of-type(2) {
   color: var(--contrast-2);
@@ -143,25 +141,23 @@ display: flex;
 .artworks-text h2 {
  
    font-family: var(--font-h2-var2);
-  font-size: 50px;
-  letter-spacing: 6px;
+ 
   font-weight: 500;
+    line-height: 1.6;
 }
 
-.artworks-text p {
-  line-height: 1.6;
-}
 
 p {
   font-family: var(--font-p-var1);
-  font-size: 16px;
-  line-height: 1.7;
+ 
   font-weight: 400;
 }
 
 /* ---------- MOBIL ---------- */
 
 @media (max-width: 768px) {
+
+  /* Stack sektioner */
   .new-realism,
   .artworks {
     flex-direction: column;
@@ -169,12 +165,72 @@ p {
 
   .New_realism_text,
   .New_realism_img,
-  .artworks img,
-  .artworks-text {
+  .artworks-text,
+  .artworks-img {
     width: 100%;
   }
 
+  /* Tekstblok i hero: centrer og reducer fontstørrelser */
+  .New_realism_text {
+    padding: 40px 6%;
+    justify-content: center;
+    padding-bottom: 40px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .New_realism_text h1:first-child {
+    font-size: clamp(20px, 6.5vw, 40px);
+    margin: 0 0 6px;
+    font-style: italic;
+  }
+  .New_realism_text h1:last-child {
+    font-size: clamp(32px, 10.5vw, 64px);
+    margin: 0;
+    line-height: 0.95;
+  }
+/* Billeder: fyld bredde, behold proportion */
+  .New_realism_img img,
+  .artworks-img img {
+    width: 100%;
+    height: auto; /* vigtigt: undgå stræk */
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Comments: smallere column + centrering som i dit screenshot */
   .comments {
-    padding: 60px 10%;
+    padding: 48px 6%;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .comments-text {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .comments h2:first-child {
+    font-size: clamp(16px, 4.5vw, 28px);
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+
+  .comments h2:last-child {
+    font-size: clamp(22px, 7vw, 44px);
+    margin-top: 0;
+  }
+
+  .comments p {
+    font-size: clamp(13px, 3.6vw, 16px);
+    line-height: 1.6;
+    margin-top: 18px;
+  }
+  /* Artworks tekst */
+  .artworks-text {
+    padding: 36px 6%;
+    text-align: center;
   }
 }
+
