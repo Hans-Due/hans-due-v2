@@ -1,0 +1,171 @@
+
+/* ---------- LAYOUT ---------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  padding: 4rem 6rem;
+  background-color: var(--bg-base);
+  font-family: var(--font-p-var1);
+  color: var(--black-primary);
+   
+}
+
+body {
+  margin: 0;
+}
+
+/* ---------- TEKST ---------- */
+.contact-text h2:first-of-type {
+  font-family: var(--font-h1-var1);
+  font-style: italic;
+  font-size: 2.6rem;
+  color: var(--contrast-2);
+  margin: 0;
+}
+
+.contact-text h2:nth-of-type(2) {
+  font-family: var(--font-h1-var2);
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  color: var(--red-primary);
+  margin: 0 0 2rem 0;
+}
+
+.contact-text p {
+  max-width: 520px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ---------- FORM KORT ---------- */
+form {
+   background-color: var(--blue-var2);
+  border-radius: 3rem;
+  padding: 2.8rem 2.6rem;
+  width: 420px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+
+  box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* ---------- FORM FELTER ---------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+/* ---------- INPUTS ---------- */
+input,
+textarea {
+
+
+    width: 100%;
+  max-width: 100%;
+
+  background-color: var(--blue-var3);
+  border: none;
+  border-radius: 999px;
+
+  padding: 0.8rem 1.2rem;
+  font-family: var(--font-p-var1);
+  font-size: 0.9rem;
+
+  box-sizing: border-box;
+}
+
+textarea {
+  border-radius: 1.6rem;
+  min-height: 160px;
+  resize: none;
+}
+
+/* ---------- PLACEHOLDER ---------- */
+::placeholder {
+  color: var(--black-var2);
+    opacity: 1;
+}
+
+/* ---------- CHECKBOX ---------- */
+label.terms {
+ 
+
+   grid-column: 1 / -1;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ---------- KNAP ---------- */
+button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 1.4rem;
+  padding: 0.6rem 2.8rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--blue-primary);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--blue-var1);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ---------- FEJL ---------- */
+.error-message {
+  display: none;
+  font-size: 0.7rem;
+  color: var(--red-primary);
+  margin-top: 0.2rem;
+}
+
+.form-group:has(:user-invalid) .error-message {
+  display: block;
+}
+
+.form-group:has(:user-invalid) input,
+.form-group:has(:user-invalid) textarea {
+  outline: 2px solid var(--red-primary);
+}
+
+/* ---------- FOCUS ---------- */
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--contrast-3);
+  outline-offset: 2px;
+}
+
+/* ---------- MOBIL ---------- */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
