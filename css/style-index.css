@@ -31,13 +31,102 @@
 
 /*-------------- SEKTION 2 ----------------*/
 .slider-sektion {
-  height: 90vh;
+  height: 100vh;
 }
 
+.see-more {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.slider-main-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .slider-sektion h2 {
   color: var(--red-primary);
   text-align: center;
   padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.slider-dimensions {
+  width: min(25vw, 720px);
+  aspect-ratio: 1 / 1;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  background-color: lightgray;
+}
+.slider {
+  position: absolute;
+  display: flex;
+  transform: translateX(-0%);
+  transition: transform 1s;
+}
+
+.slider > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-container {
+  position: absolute;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.nav-container:hover {
+  opacity: 1;
+}
+
+.index-container {
+  align-self: flex-end;
+  display: flex;
+  gap: 30px;
+}
+
+.index-container > button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.index-container > button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+button[data-index-change] {
+  font-size: 40px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .nav-container {
+    padding: 0 0 10px;
+  }
+
+  .index-container {
+    gap: 20px;
+  }
 }
 
 /*-------------- SEKTION 3 ----------------*/
@@ -69,6 +158,7 @@
 .hero-indexabout-text .h1-var3 {
   color: var(--contrast-1);
   text-align: right;
+  margin-bottom: 40px;
 }
 
 .more-var1 {
@@ -79,15 +169,20 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  font-family: var(--p-var1);
+  font-family: var(--font-h2-var2);
+  text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
   font-size: 24px;
   color: var(--bg-base);
-  justify-self: flex-end;
+  align-self: flex-end;
 }
 .more-var1:hover {
   background-color: var(--red-var1);
+}
+
+.hero-indexabout-text .more-var1 {
+  margin-bottom: 40px;
 }
 
 /*-------------- SEKTION 4 ----------------*/
@@ -95,9 +190,44 @@
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
 }
+
+.grid_1-1_img {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 20px;
+}
+.grid_1-1_img img {
+  width: 40vw;
+  max-width: 550px;
+  height: auto;
+}
+
 .grid_1-1_text {
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  padding: 10px;
+  margin-right: 6vw;
+}
+
+.grid_1-1_text .h2-var1 {
+  color: var(--blue-var2);
+}
+.grid_1-1_text .h2-var2 {
+  margin-bottom: 30px;
+  color: var(--blue-primary);
+}
+
+.grid_1-1_text p {
+  margin-bottom: 30px;
+  color: var(--blue-primary);
+  font-size: 24px;
 }
 
 .more-var2 {
@@ -108,12 +238,13 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  font-family: var(--p-var1);
+  font-family: var(--font-h2-var2);
+  text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
   font-size: 24px;
-  color: var(--bg-base);
-  justify-self: flex-end;
+  color: var(--black-primary);
+  align-self: flex-end;
 }
 .more-var2:hover {
   background-color: var(--contrast-2);
