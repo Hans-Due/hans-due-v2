@@ -1,0 +1,84 @@
+/*-------------- SEKTION 1 ----------------*/
+.hero-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 90vh;
+  background-color: var(--red-primary);
+}
+.hero-index-img img {
+  height: 90vh;
+  width: 50vw;
+  object-fit: cover;
+}
+.hero-index-text {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding: 30px;
+  width: 50vw;
+}
+.hero-index-text h1 {
+  color: var(--bg-base);
+}
+.hero-index-text .h1-var1 {
+  margin-left: 30px;
+  line-height: 50%;
+}
+.hero-index-text .h1-var2 {
+  margin-left: 100px;
+}
+
+/*-------------- SEKTION 2 ----------------*/
+.slider-sektion {
+  height: 90vh;
+}
+
+.slider-sektion h2 {
+  color: var(--red-primary);
+  text-align: center;
+  padding-top: 100px;
+}
+
+/*-------------- SEKTION 3 ----------------*/
+.hero-index-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  background-color: var(--contrast-4);
+}
+
+.hero-indexabout-vid img {
+  height: 90vh;
+  width: 50vw;
+  object-fit: cover;
+}
+.hero-indexabout-text {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding: 30px;
+  width: 50vw;
+}
+.hero-indexabout-text .h1-var1 {
+  color: var(--bg-base);
+  text-align: right;
+  line-height: 70%;
+}
+.hero-indexabout-text .h1-var3 {
+  color: var(--contrast-1);
+  text-align: right;
+}
+
+.more-var1 {
+  background-color: var(--red-primary);
+  padding: 20px;
+  border-radius: 42.5px;
+  border: none;
+  cursor: pointer;
+}
+
+/*-------------- SEKTION 4 ----------------*/
+.grid_1-1 {
+  height: 90vh;
+}
