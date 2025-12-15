@@ -1,0 +1,28 @@
+section {
+  height: 90vh;
+}
+
+body {
+  background-color: var(--bg-base);
+}
+
+p {
+  font-style: var(--font-p-var1);
+}
+
+.about_top {
+  font-style: var(--font-h1-var1);
+}
+
+.img_top {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  max-width: 600px;
+}
+
+@media screen and (min-width: 800px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
