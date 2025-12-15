@@ -37,7 +37,7 @@
 .slider-sektion h2 {
   color: var(--red-primary);
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 /*-------------- SEKTION 3 ----------------*/
@@ -57,6 +57,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+  justify-content: flex-end;
   padding: 30px;
   width: 50vw;
 }
@@ -72,13 +73,48 @@
 
 .more-var1 {
   background-color: var(--red-primary);
-  padding: 20px;
+  width: 200px;
+  padding: 16px;
   border-radius: 42.5px;
   border: none;
   cursor: pointer;
+  text-align: center;
+  font-family: var(--p-var1);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--bg-base);
+  justify-self: flex-end;
+}
+.more-var1:hover {
+  background-color: var(--red-var1);
 }
 
 /*-------------- SEKTION 4 ----------------*/
 .grid_1-1 {
   height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid_1-1_text {
+  padding: 50px;
+}
+
+.more-var2 {
+  background-color: var(--contrast-1);
+  width: 200px;
+  padding: 16px;
+  border-radius: 42.5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--p-var1);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--bg-base);
+  justify-self: flex-end;
+}
+.more-var2:hover {
+  background-color: var(--contrast-2);
 }
