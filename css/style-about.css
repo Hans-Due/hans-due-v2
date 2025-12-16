@@ -51,6 +51,7 @@ p {
   align-items: center;
   padding: 80px 20px;
   text-align: left;
+  margin-top: 60px;
 }
 
 .background_header h2 {
@@ -77,27 +78,223 @@ p {
 
 .about_interviewmain {
   background-color: var(--red-var1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* PRINTSHOP */
 .about_printshop {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  align-items: flex-start;
+  grid-template-columns: 1fr 1fr;
 }
 
 .printshop_header .h2-var2 {
   color: var(--red-primary);
+  margin-top: 20px;
 }
 
 .about_printshop .printshop_img img {
   width: 100%;
-  max-width: 420px;
-  height: auto;
+  max-width: 500px;
   object-fit: cover;
+  margin: 170px auto;
 }
 
 .printshop_header p {
-  flex: 1;
+  margin-top: 20px;
   max-width: 60ch;
+}
+
+.printshop_header {
+  margin: 40px 10px 0 100px;
+}
+
+/* GRAPHIC ARTS */
+.about_graphic {
+  background-color: var(--blue-primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about_graphic .graphic_img img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  margin: 170px auto;
+}
+
+.graphic_header p {
+  margin-top: 20px;
+  max-width: 60ch;
+  color: var(--bg-base);
+}
+
+.graphic_header .h2-var2 {
+  color: var(--contrast-2);
+  margin-top: 20px;
+}
+
+.graphic_header {
+  margin: 40px 40px 0 10px;
+}
+
+/* THE FIRM */
+.about_firm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.firm_header .h2-var2 {
+  color: var(--red-primary);
+  margin-top: 20px;
+}
+
+.about_firm .firm_img img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  margin: 170px auto;
+}
+
+.firm_header p {
+  margin-top: 20px;
+  max-width: 60ch;
+}
+
+.firm_header {
+  margin: 40px 10px 0 100px;
+}
+
+/* KNAP TIL CONTACT */
+.more-var1 {
+  background-color: var(--red-primary);
+  width: 200px;
+  padding: 16px;
+  border-radius: 42.5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--font-h2-var2);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--bg-base);
+}
+.more-var1:hover {
+  background-color: var(--red-var1);
+}
+
+.background_header1 h2 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: var(--red-primary);
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* UNMUTE UKNOWN CSS */
+.about_mainvideo {
+  position: relative;
+}
+.video-unmute {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: var(--red-var1);
+  color: var(--bg-base);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* MOBILSITE */
+
+@media (max-width: 800px) {
+  .about_section_top {
+    grid-template-columns: 1fr;
+  }
+  .img_top img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 45vh;
+    width: 100vw;
+  }
+  .about_top {
+    grid-row: 2/3;
+    text-align: right;
+    align-self: end;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .about_top .h1-var1 {
+    margin-left: 0;
+  }
+
+  .about_background {
+    padding: 20px 20px;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .background_header h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .background_earlyyears_header h2 {
+    font-size: 1.5rem;
+    color: var(--blue-primary);
+    margin: -15px 0;
+  }
+  .background_text {
+    margin-top: 20px;
+    padding: 10px;
+    color: var(--black-primary);
+  }
+  .background_text p {
+    padding-bottom: 20px;
+  }
+
+  video {
+    width: 90vw;
+  }
+
+  .about_printshop {
+    grid-template-columns: 1fr;
+    height: 180vh;
+  }
+
+  .printshop_header {
+    margin: 0;
+    padding: 20px 20px;
+  }
+
+  .about_printshop .printshop_img img {
+    margin: 0 100px 0 0;
+    padding: 20px;
+  }
+
+  .about_graphic .graphic_img img {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .about_graphic {
+    grid-template-columns: 1fr;
+    height: 180vh;
+  }
+
+  .graphic_header {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .graphic_header .h2-var2 {
+    margin-top: 0;
+  }
 }
