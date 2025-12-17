@@ -11,36 +11,38 @@ p {
 }
 
 /* TOPPEN */
+
+.about_section_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 90vh;
+  background-color: var(--contrast-4);
+}
+
 .img_top img {
-  grid-column: 2/3;
-  grid-row: 1/3;
   height: 90vh;
   width: 50vw;
   object-fit: cover;
 }
-
-.about_section_top {
-  background-color: var(--contrast-4);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .about_top {
-  grid-row: 1/2;
-  font-family: var(--font-h1-var2);
-  text-align: right;
-  align-self: end;
-  margin: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: flex-end;
+  padding: 30px;
+  width: 50vw;
 }
 
 .about_top .h1-var1 {
   color: var(--bg-base);
-  justify-content: end;
-  margin-left: 400px;
+  text-align: right;
 }
 
 .about_top .h1-var3 {
   color: var(--contrast-1);
+  text-align: right;
+  padding-bottom: 40px;
 }
 
 /* SECTION 2 */
@@ -51,12 +53,11 @@ p {
   align-items: center;
   padding: 80px 20px;
   text-align: left;
-  margin-top: 60px;
 }
 
 .background_header h2 {
   font-size: 5rem;
-  margin-bottom: 10px;
+  padding-bottom: 20px;
   color: var(--red-primary);
   text-align: center;
 }
@@ -86,7 +87,8 @@ p {
 /* PRINTSHOP */
 .about_printshop {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
+  height: 95vh;
 }
 
 .printshop_header .h2-var2 {
@@ -95,15 +97,17 @@ p {
 }
 
 .about_printshop .printshop_img img {
-  width: 100%;
+  width: 30vw;
   max-width: 500px;
   object-fit: cover;
-  margin: 170px auto;
+  margin: 170px 30px;
 }
 
 .printshop_header p {
   margin-top: 20px;
-  max-width: 60ch;
+  max-width: 65ch;
+  font-size: 18px;
+  color: var(--black-primary);
 }
 
 .printshop_header {
@@ -114,19 +118,26 @@ p {
 .about_graphic {
   background-color: var(--blue-primary);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
 }
-
-.about_graphic .graphic_img img {
-  width: 100%;
+.graphic_img {
+  display: flex;
+  align-items: baseline;
+  justify-content: right;
+  padding: 20px;
+}
+.graphic_img img {
+  width: 30vw;
   max-width: 500px;
-  object-fit: cover;
-  margin: 170px auto;
+  height: auto;
+  padding-right: 30px;
+  padding-top: 150px;
 }
 
 .graphic_header p {
   margin-top: 20px;
-  max-width: 60ch;
+  max-width: 65ch;
+  font-size: 18px;
   color: var(--bg-base);
 }
 
@@ -142,7 +153,8 @@ p {
 /* THE FIRM */
 .about_firm {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
+  height: 95vh;
 }
 
 .firm_header .h2-var2 {
@@ -151,15 +163,17 @@ p {
 }
 
 .about_firm .firm_img img {
-  width: 100%;
+  width: 30vw;
   max-width: 500px;
   object-fit: cover;
-  margin: 170px auto;
+  margin: 170px 30px;
 }
 
 .firm_header p {
   margin-top: 20px;
-  max-width: 60ch;
+  max-width: 65ch;
+  font-size: 18px;
+  color: var(--black-primary);
 }
 
 .firm_header {
@@ -217,19 +231,19 @@ p {
   .about_section_top {
     grid-template-columns: 1fr;
   }
+
+  .img_top {
+    order: -1;
+  }
   .img_top img {
-    grid-column: 1/2;
-    grid-row: 1/2;
     height: 45vh;
     width: 100vw;
   }
   .about_top {
-    grid-row: 2/3;
-    text-align: right;
-    align-self: end;
+    height: 45vh;
+    width: 100vw;
     margin: 0;
     padding: 20px;
-    margin-bottom: 20px;
   }
   .about_top .h1-var1 {
     margin-left: 0;
@@ -242,8 +256,16 @@ p {
   }
 
   .background_header h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+  .background_header1 h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    padding-top: 50px;
   }
 
   .background_earlyyears_header h2 {
@@ -273,15 +295,31 @@ p {
     margin: 0;
     padding: 20px 20px;
   }
-
-  .about_printshop .printshop_img img {
-    margin: 0 100px 0 0;
-    padding: 20px;
+  .printshop_header .h2-var2 {
+    margin-top: 0;
   }
-
+  .about_printshop .printshop_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: -1;
+  }
+  .about_printshop .printshop_img img {
+    margin: 0;
+    width: 90vw;
+    margin-top: 20px;
+  }
+  .about_graphic .graphic_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
   .about_graphic .graphic_img img {
     margin: 0;
-    padding: 20px;
+    width: 90vw;
+    margin-top: 20px;
+    padding: 0;
   }
 
   .about_graphic {
@@ -296,5 +334,35 @@ p {
 
   .graphic_header .h2-var2 {
     margin-top: 0;
+  }
+
+  .about_firm {
+    grid-template-columns: 1fr;
+    height: 160vh;
+  }
+  .firm_header {
+    margin: 0;
+    padding: 20px;
+  }
+  .firm_header .h2-var2 {
+    margin-top: 0;
+  }
+  .firm_img {
+    order: -1;
+  }
+  .about_firm .firm_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .about_firm .firm_img img {
+    margin: 0;
+    width: 90vw;
+    margin-top: 20px;
+  }
+
+  .about_background .more-var1 {
+    margin-top: 40px;
   }
 }
