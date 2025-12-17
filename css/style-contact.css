@@ -1,14 +1,10 @@
-
 /* ---------- LAYOUT ---------- */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 500px;
   gap: 4rem;
   padding: 4rem 6rem;
-  background-color: var(--bg-base);
-  font-family: var(--font-p-var1);
   color: var(--black-primary);
-   
 }
 
 body {
@@ -19,53 +15,47 @@ body {
 .contact-text h2:first-of-type {
   font-family: var(--font-h1-var1);
   font-style: italic;
-font-size: 90px;
+  font-size: 90px;
   color: var(--contrast-2);
   margin: 0;
   text-align: center;
-
 }
 
-#getyourown{
-    font-size: 65px;
+#getyourown {
+  font-size: 65px;
 }
 
 .contact-text h2:nth-of-type(2) {
   font-family: var(--font-h1-var2);
- 
-  color: var(--red-var1);
+
+  color: var(--red-primary);
   margin: 0 0 2rem 0;
   text-align: center;
 }
 
-
 .contact-text p {
   font-family: var(--font-p-var1);
- 
-    max-width: 600px;
 
- text-align: center;
- margin: 0 auto;
- 
+  max-width: 600px;
 
-
-
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* ---------- FORM KORT ---------- */
 form {
-   background-color: var(--blue-var2);
+  background-color: var(--blue-var2);
   border-radius: 3rem;
   padding: 2.8rem 2.6rem;
   width: 500px;
-
+}
+.form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
 
   box-sizing: border-box;
 }
-
 
 *,
 *::before,
@@ -86,9 +76,7 @@ form {
 /* ---------- INPUTS ---------- */
 input,
 textarea {
-
-
-    width: 100%;
+  width: 100%;
   max-width: 100%;
 
   background-color: var(--blue-var3);
@@ -111,33 +99,40 @@ textarea {
 /* ---------- PLACEHOLDER ---------- */
 ::placeholder {
   color: var(--black-var2);
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ---------- CHECKBOX ---------- */
-label.terms {
- 
-
-   grid-column: 1 / -1;
-  color: white;
-  font-size: 0.8rem;
+.terms-flex {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin: 30px 0 10px 0;
+}
+
+label.terms {
+  color: var(--blue-var3);
+  font-family: var(--font-p-var1);
+  font-size: 1rem;
   gap: 0.6rem;
 }
 
 /* ---------- KNAP ---------- */
 button {
-  grid-column: 1 / -1;
-  justify-self: center;
-  margin-top: 1.4rem;
-  padding: 0.6rem 2.8rem;
-  border-radius: 999px;
-  border: none;
+  display: block;
+  margin: 0 auto;
   background-color: var(--blue-primary);
-  color: white;
-  font-size: 0.9rem;
+  width: 200px;
+  padding: 16px 0;
+  border-radius: 42.5px;
+  border: none;
   cursor: pointer;
+  text-align: center;
+  font-family: var(--font-h2-var2);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--bg-base);
 }
 
 button:hover {
@@ -176,16 +171,27 @@ textarea:focus-visible {
 @media (max-width: 900px) {
   .contact-layout {
     grid-template-columns: 1fr;
-    padding: 1rem; /* reduceret fra 2rem */
+    padding: 1rem;
+    gap: 2rem;
   }
 
   form {
     grid-template-columns: 1fr;
-    padding: 1.2rem;
-    max-width: 100%;
+    padding: 1.6rem;
+    max-width: 90vw;
+    margin-bottom: 30px;
+  }
+  .form-group {
+    grid-column: 1 / -1;
   }
 
-  .contact-text h2:first-of-type { font-size: 34px; }
-  #getyourown { font-size: 32px; }
-  .contact-text p { font-size: 0.92rem; line-height: 1.4; }
+  .contact-text h2:first-of-type {
+    font-size: 34px;
+  }
+  #getyourown {
+    font-size: 32px;
+  }
+  .contact-text p {
+    line-height: 1.4;
+  }
 }
